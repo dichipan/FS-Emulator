@@ -148,5 +148,10 @@ namespace GameLauncher
             string? appPath = Path.GetDirectoryName(Application.StartupPath);
             if (appPath != null) Process.Start("explorer.exe", appPath);
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
