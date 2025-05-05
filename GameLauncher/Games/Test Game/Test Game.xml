@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Game>
+    <Name>Test Game</Name>
+    <Description>Test Game is a Test Game for testing.</Description>
+    <Playtime>0</Playtime>
+    <!-- in minutes or seconds -->
+    <FilePath>D:\SteamLibrary\steamapps\common\REPO\REPO.exe</FilePath>
+</Game>

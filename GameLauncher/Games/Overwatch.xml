@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Game>
-    <Name>Overwatch</Name>
-    <Description>Overwatch is a team-based multiplayer first-person shooter developed and published by Blizzard Entertainment.</Description>
-    <Playtime>125</Playtime>
-    <!-- in minutes or seconds -->
-    <FilePath>C:\Program Files (x86)\Overwatch\_retail_\Overwatch.exe</FilePath>
-</Game>
