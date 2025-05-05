@@ -4,3 +4,5 @@ WIP Game Launcher to act as an emulator for a console that does not exist. Fully
 - Optional to add external games, simply create a folder in the Games folder with the title of the game along with a .xml file containing the information and an icon.png. (See example TestGame.xml for reference)
 - Adding games along with tracking time already finished, simply follow above.
 - Items in the Menu Strip are currently non-functional and are the current focus.
+
+![image](https://github.com/user-attachments/assets/9b1d02ce-b738-4a65-9dfa-55d3d356a84e)
