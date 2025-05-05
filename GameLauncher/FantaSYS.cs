@@ -1,5 +1,6 @@
 using System.Xml;
 using System.Linq;
+using System.Diagnostics;
 
 namespace GameLauncher
 {
@@ -7,7 +8,7 @@ namespace GameLauncher
     {
         string folderPath = Path.Combine(Application.StartupPath, "Games");
         string[] files = Array.Empty<string>();
-        string[] folders = Array.Empty<string>();  
+        string[] folders = Array.Empty<string>();
 
         // Initializes the system
         public FantaSYS()
@@ -24,8 +25,8 @@ namespace GameLauncher
             foreach (string folder in folders)
             {
                 string? xmlFile = Directory.GetFiles(folder, "*.xml").FirstOrDefault();
-                string? filePath = Directory.GetFiles(folder, "*png").FirstOrDefault();
-                if (xmlFile != null) LoadGame(xmlFile, filePath);
+                string? imgFile = Directory.GetFiles(folder, "*png").FirstOrDefault();
+                if (xmlFile != null) LoadGame(xmlFile, imgFile);
             }
         }
 
@@ -112,7 +113,6 @@ namespace GameLauncher
         {
             foreach (Control control in flowLayoutPanel1.Controls)
             {
-                // Do something with each control
                 control.Width = flowLayoutPanel1.Width;
             }
         }
@@ -122,6 +122,31 @@ namespace GameLauncher
         {
             menuStrip1.Renderer = new ToolStripSystemRenderer();
             menuStrip1.BackColor = Color.White;
+        }
+
+        private void addGameMenuItem_Click(object sender, EventArgs e)
+        {
+            AddGame addGame = new AddGame();
+            if (addGame.ShowDialog() == DialogResult.OK)
+            {
+                ReloadGames();
+                MessageBox.Show("Game successfully added.");
+            }
+        }
+
+        // Reloads game list
+        private void ReloadGames()
+        {
+            flowLayoutPanel1.Controls.Clear();
+            flowLayoutPanel1.Height = 0;
+            LoadGames();
+        }
+
+        // Opens application directory in file explorer
+        private void openFolderMenuItem_Click(object sender, EventArgs e)
+        {
+            string? appPath = Path.GetDirectoryName(Application.StartupPath);
+            if (appPath != null) Process.Start("explorer.exe", appPath);
         }
     }
 }

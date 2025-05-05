@@ -30,8 +30,8 @@
         {
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
-            achooToolStripMenuItem = new ToolStripMenuItem();
-            lalalalaToolStripMenuItem = new ToolStripMenuItem();
+            addGameMenuItem = new ToolStripMenuItem();
+            openFolderMenuItem = new ToolStripMenuItem();
             exitToolStripMenuItem = new ToolStripMenuItem();
             optionsToolStripMenuItem = new ToolStripMenuItem();
             eeToolStripMenuItem = new ToolStripMenuItem();
@@ -55,27 +55,29 @@
             // 
             // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { achooToolStripMenuItem, lalalalaToolStripMenuItem, exitToolStripMenuItem });
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addGameMenuItem, openFolderMenuItem, exitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             fileToolStripMenuItem.Size = new Size(46, 24);
             fileToolStripMenuItem.Text = "File";
             // 
-            // achooToolStripMenuItem
+            // addGameMenuItem
             // 
-            achooToolStripMenuItem.Name = "achooToolStripMenuItem";
-            achooToolStripMenuItem.Size = new Size(211, 26);
-            achooToolStripMenuItem.Text = "Load Game";
+            addGameMenuItem.Name = "addGameMenuItem";
+            addGameMenuItem.Size = new Size(224, 26);
+            addGameMenuItem.Text = "Add Game";
+            addGameMenuItem.Click += addGameMenuItem_Click;
             // 
-            // lalalalaToolStripMenuItem
+            // openFolderMenuItem
             // 
-            lalalalaToolStripMenuItem.Name = "lalalalaToolStripMenuItem";
-            lalalalaToolStripMenuItem.Size = new Size(211, 26);
-            lalalalaToolStripMenuItem.Text = "Open Main Folder";
+            openFolderMenuItem.Name = "openFolderMenuItem";
+            openFolderMenuItem.Size = new Size(224, 26);
+            openFolderMenuItem.Text = "Open Main Folder";
+            openFolderMenuItem.Click += openFolderMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(211, 26);
+            exitToolStripMenuItem.Size = new Size(224, 26);
             exitToolStripMenuItem.Text = "Exit";
             // 
             // optionsToolStripMenuItem
@@ -120,11 +122,12 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Dock = DockStyle.Top;
+            flowLayoutPanel1.AutoScrollMinSize = new Size(-1000, 0);
+            flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(0, 28);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(800, 10);
+            flowLayoutPanel1.Size = new Size(800, 425);
             flowLayoutPanel1.TabIndex = 1;
             flowLayoutPanel1.WrapContents = false;
             flowLayoutPanel1.Resize += flowLayoutPanel1_Resize;
@@ -133,6 +136,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             BackColor = Color.White;
             ClientSize = new Size(800, 453);
             Controls.Add(flowLayoutPanel1);
@@ -154,8 +158,8 @@
         private ToolStripMenuItem optionsToolStripMenuItem;
         private ToolStripMenuItem toolsToolStripMenuItem;
         private ToolStripMenuItem helpToolStripMenuItem;
-        private ToolStripMenuItem achooToolStripMenuItem;
-        private ToolStripMenuItem lalalalaToolStripMenuItem;
+        private ToolStripMenuItem addGameMenuItem;
+        private ToolStripMenuItem openFolderMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
         private ToolStripMenuItem eeToolStripMenuItem;
         private ToolStripMenuItem aaaToolStripMenuItem;

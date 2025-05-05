@@ -105,7 +105,7 @@
             // 
             // picGameIcon
             // 
-            picGameIcon.Image = Properties.Resources.Overwatch_circle_logo_svg;
+            picGameIcon.Image = Properties.Resources.no_image_icon_23485;
             picGameIcon.Location = new Point(13, 11);
             picGameIcon.Name = "picGameIcon";
             picGameIcon.Size = new Size(100, 100);

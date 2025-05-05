@@ -45,7 +45,7 @@ namespace GameLauncher
             else
             {
                 startTime = DateTime.Now;
-                labelName.Text = "Game is starting...";
+                labelName.Text = labelName.Text + " (Playing)";
                 gameProcess = Process.Start(gamePath);
                 gameProcess.EnableRaisingEvents = true;
                 gameProcess.Exited += (sender, e) =>
@@ -58,7 +58,7 @@ namespace GameLauncher
         // Closes game
         private void CloseGame()
         {
-            labelName.Text = "Game has exited.";
+            labelName.Text = labelName.Text.Replace(" (Playing)", "");
             CalculateTime();
         }
 

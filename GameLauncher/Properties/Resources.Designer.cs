@@ -63,6 +63,16 @@ namespace GameLauncher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap no_image_icon_23485 {
+            get {
+                object obj = ResourceManager.GetObject("no-image-icon-23485", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Overwatch_circle_logo_svg {
             get {
                 object obj = ResourceManager.GetObject("Overwatch_circle_logo.svg", resourceCulture);
