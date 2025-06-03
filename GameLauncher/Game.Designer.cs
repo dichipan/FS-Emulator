@@ -64,8 +64,8 @@
             picPlayButton.TabIndex = 4;
             picPlayButton.TabStop = false;
             picPlayButton.Click += picPlayButton_Click;
+            picPlayButton.MouseEnter += picPlayButton_MouseEnter;
             picPlayButton.MouseLeave += picPlayButton_MouseLeave;
-            picPlayButton.MouseHover += picPlayButton_MouseHover;
             // 
             // labelTime
             // 

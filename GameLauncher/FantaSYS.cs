@@ -130,7 +130,7 @@ namespace GameLauncher
             if (addGame.ShowDialog() == DialogResult.OK)
             {
                 ReloadGames();
-                MessageBox.Show("Game successfully added.");
+                //MessageBox.Show("Game successfully added.");
             }
         }
 
@@ -140,6 +140,7 @@ namespace GameLauncher
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.Height = 0;
             LoadGames();
+            MessageBox.Show("Game list updated.");
         }
 
         // Opens application directory in file explorer
@@ -152,6 +153,31 @@ namespace GameLauncher
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void sssToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("FantEM is an open-source emulator for the FantaSYS written in C++. With the 2001 leak of source code along with the disappearance of any trace of Embïb both physically and legally, we were able to fully reverse engineer the console. There are two ways to experience our project, FantEM is the first and acts as a simple interface for playing FantaSYS games. The second way to experience our project is by launching the FantaSYS 3D Home, allowing a more authentic experience where users run raw FantaSYS code and can play games just like they would back in 1995.", "About FantEM");
+        }
+
+        private void homeLauncherMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("FantaSYS 3D Home not installed.");
+        }
+
+        private void scanForNewGamesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReloadGames();
+        }
+
+        private void checkForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("No new updates available.");
+        }
+
+        private void vERIFIEDROMSONLYToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Graphical changes only apply to games that have been thoroughly tested and verified by our team.");
         }
     }
 }

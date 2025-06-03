@@ -90,8 +90,8 @@ namespace GameLauncher
             labelTime.Text = "Time Played: " + newTime + " Hours";
         }
 
-        // Changes play button to green upon mouse hovering
-        private void picPlayButton_MouseHover(object sender, EventArgs e)
+        // Changes play button to green upon mouse entering
+        private void picPlayButton_MouseEnter(object sender, EventArgs e)
         {
             picPlayButton.Image = Properties.Resources.PlayButton;
         }
