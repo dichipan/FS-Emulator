@@ -44,6 +44,14 @@ namespace GameLauncher
             }
             else
             {
+                ProcessStart();
+            }
+        }
+
+        private void ProcessStart()
+        {
+            try
+            {
                 startTime = DateTime.Now;
                 labelName.Text = labelName.Text + " (Playing)";
                 gameProcess = Process.Start(gamePath);
@@ -52,6 +60,11 @@ namespace GameLauncher
                 {
                     CloseGame();
                 };
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Game path is not set.", "Error");
+                labelName.Text = labelName.Text.Replace(" (Playing)", "");
             }
         }
 
